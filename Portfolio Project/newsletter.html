@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intitial-scale = 1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <title>Newsletter</title>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Newsletter</h1>
+    </header>
+    <nav class="mobileNav">
+        <a href="#" id="subMenu"><img src="./Images/navicon.png" alt="navIcon"></a>
+        <ul id="subTitle">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href = "login.php">Admin Data</a></li>
+            <li><a href="listemployees.php">List Employees</a></li>
+        </ul>
+
+    </nav>
+
+    <nav id="horizonNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href = "login.php">Admin Data</a></li>
+            <li><a href="listemployees.php">List Employees</a></li>
+        </ul>
+    </nav>
+    <form class="form" action="thankyou.php" method="post">
+        <fieldset id="newsletterField">
+
+            <legend>Newsletter Sign Up</legend>
+
+            <div class="formRow">
+                <label for="signFirst">First Name</label>
+                <input type="text" id="signFirst" name="newsFirstName" required placeholder="First Name">
+            </div>
+
+            <div class="formRow">
+                <label for="signLast">Last Name</label>
+                <input type="text" id="signLast" name="newsLastName" required placeholder="Last Name">
+            </div>
+
+            <div class="formRow">
+                <label for="signEmail">E-Mail Address</label>
+                <input type="email" name="newsEmail" id="signEmail" required placeholder="ex: someone@email.com">
+            </div>
+
+            <div class="formRow">
+                <label for="ads">Where did you hear about us?</label>
+                <input type="text" list="source" name="heardFrom" id="ads" />
+                <datalist id="source">
+                    <option value="Newspaper">
+                    <option value="Radio">
+                    <option value="Friend/Family">
+                    <option value="Web Search">
+                </datalist>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Sign me up!">
+                <input type="reset" value="Clear Info">
+            </div>
+
+        </fieldset>
+        
+    </form>
+    <footer>
+        <img src="./Images/oceanside_logo.png" alt="Oceanside Logo">
+        <p>Oceanside Books &#x274F; Buy, Sell, Trade Books &#x274F; New and Used Books</p>
+    </footer>
+
+</body>
+
+</html>

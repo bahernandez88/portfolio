@@ -1,0 +1,348 @@
+@charset "utf-8";
+/*
+This CSS is used to apply detailed styling
+*/
+@font-face {
+    font-family: 'VT323';
+    src: url(../Fonts/VT323-Regular.ttf) format('truetype');
+}
+
+
+#q1 {
+    clear: both;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#qualList {
+    float: left;
+    margin-left: auto;
+    padding-left: 20%;
+    font-size: 1em;
+
+}
+
+#qualList2 {
+    display: inline-block;
+    float: right;
+    margin-right: auto;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 1%;
+    font-size: 1em;
+}
+
+#reference_list {
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+
+    font-size: 35px;
+
+}
+
+div > ul {
+    padding: 0px;
+}
+
+#reference_list li {
+    text-align: center;
+}
+
+
+#qualList2 li {
+    font-size: 150%;
+    margin-left: auto;
+}
+
+#qualList li {
+    font-size: 150%;
+    margin-right: auto;
+}
+
+
+
+#qualsection {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* *____________________________*
+   |                            |
+   |       body styling         |
+   |                            |
+   *----------------------------*
+*/
+
+
+body > div > header > p {
+    padding: 1%;
+}
+
+body > h2 {
+    padding-left: 3%;
+}
+form{
+    display:block;
+    padding:5%;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+}
+
+/* *____________________________*
+   |                            |
+   |       Article styling      |
+   |                            |
+   *----------------------------*
+*/
+article > h1 {
+    padding-top: 1%;
+    font-size: 200%;
+}
+
+#intro {
+    clear: right;
+    font-size: 300%;
+    font-family: VT323;
+    text-align: center;
+}
+.list {
+    font-size: 1.5em;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+article > section > p{
+    font-size:.75em;
+    margin: 1% auto 10% ;
+}
+article > section > h4{
+    font-size:1.5em;
+    /* margin: 10% 1% auto; */
+    margin-top:0px;
+    margin-bottom:1%;
+    
+}
+article > h3 > img{
+    vertical-align: middle;
+}
+
+
+
+/* 
+   *____________________________*
+   |                            |
+   |       Footer styling       |
+   |                            |
+   *----------------------------*
+*/
+
+.iconLinks {
+    color: black;
+    text-decoration: underline;
+
+}
+body>footer img{
+    height:3em;
+}
+
+.iconLinks a {
+    color: grey;
+}
+body > footer {
+    clear: both;
+    text-align: center;
+    border-radius: 50px;
+    color: gray;
+    font-family: VT323, fantasy;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* *____________________________*
+   |                            |
+   |       Nav styling          |
+   |                            |
+   *----------------------------*
+*/
+
+
+
+
+div > nav ul li {
+    
+    
+    color: #0A1128;
+    display: block;
+    width: 12%;
+    float: left;
+    text-align: center;
+    font-size: .8em;
+    padding: 1% 0px;
+    margin:1% auto;
+    
+}
+
+
+
+div > nav a {
+   
+    color: #0A1128;
+    text-decoration: none;
+
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: skyblue;
+}
+
+div > nav a:visited {
+    color: midnightblue;
+}
+div > nav a:visited:hover {
+    color: skyblue;
+}
+
+
+/* *____________________________*
+   |                            |
+   |       Image styling        |
+   |                            |
+   *----------------------------*
+*/
+#column1 {
+    clear: right;
+    max-width: 40%;
+    width: 100%;
+    max-height: 50%;
+    width: 50%;
+    height: auto;
+    float: left;
+    padding-left: 2%;
+    display: block;
+    margin-left: auto;
+}
+
+#column2 {
+    display: block;
+    max-height: 50%;
+    max-width: 40%;
+    height: auto;
+    width: 100%;
+    float: right;
+    margin-right: auto;
+    padding-right: 5%;
+}
+
+
+
+
+
+
+
+h1 {
+    padding-top: 1%;
+
+}
+
+header > h1 {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+h2 {
+    text-align: center;
+
+}
+
+#linkedIn {
+    font-size: .5em;
+}
+
+article {
+    clear: both;
+    padding: 1%;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+
+#portrait {
+    float: left;
+    margin-left:5%;
+    
+
+    
+    border-radius: 50px;
+    box-shadow: black 15px 10px 50px;
+}
+/* 
+   *____________________________*
+   |                            |
+   |       Header styling       |
+   |                            |
+   *----------------------------*
+*/
+.header {
+    border-bottom: double;
+    border-bottom-width: 15px;
+    text-align: center;
+    padding-top: 50px;
+}
+header > p {
+    
+    font-family: 'Times New Roman', monospace, serif;
+    font-size: 1em;
+    font-weight: bold;
+    height:10%;
+    line-height:50px;
+
+}
+
+#certheader::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* *____________________________*
+   |                            |
+   |       Table styling        |
+   |                            |
+   *----------------------------*
+*/
+
+table {
+    border-collapse: collapse;
+    background-color: aliceblue;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 3%;
+
+
+
+}
+
+table th, table td {
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1em;
+
+
+}
+

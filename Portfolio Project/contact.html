@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<!--contact page will pull values entered and send to ./Model/index.php for processing-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intitial-scale = 1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    
+
+    <title>Contact Us</title>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav class="mobileNav">
+        <a href="#" id="subMenu"><img src="./Images/navicon.png" alt="navIcon"></a>
+        <ul id="subTitle">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href = "login.php">Admin Data</a></li>
+            <li><a href="listemployees.php">List Employees</a></li>
+        </ul>
+
+    </nav>
+
+
+    <nav id="horizonNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href = "login.php">Admin Data</a></li>
+            <li><a href="listemployees.php">List Employees</a></li>
+        </ul>
+    </nav>
+
+    <form class="form" action="./Model/index.php" method="post">
+        <fieldset id="info">
+            <legend>Contact Us</legend>
+
+            <div class="formRow">
+                    <label for="why" class="labels">Reason for contact</label>
+                    <input type="text" list="reasons" name="contactReason" id="why" required/>
+                    <datalist id="reasons">
+                        <option value="Complaint">
+                        <option value="Question">
+                        <option value="Comment">
+                        <option value="Compliment">
+                    </datalist>
+                </div>
+
+            <div class="formRow" class="labels">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="custFirstName" placeholder="First Name" required />
+                <input type ="hidden" name="action" value ="add_comment">
+            </div>
+
+            <div class="formRow">
+                <label for="lastName" class="labels">Last Name</label>
+                <input type="text" id="lastName" name="custLastName" placeholder="Last Name" required/>
+            </div>
+
+            <div class="formRow">
+                <label for="email" class="labels">Email Address</label>
+                <input type="email" id="email" name="custEmail" placeholder="ex: someone@email.com" required />
+            </div>
+
+            <div class="formRow">
+                <label for="phone" class="labels">Phone Number</label>
+                <input type="tel" id="phone" name="custPhone" placeholder="ex:(123) 456-7890"  pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"/>
+            </div>
+
+            
+            <br />
+            <div class="formRow">
+                <label for="custComment" class="labels">Leave a Comment or Question!</label>
+                <textarea name="comment" id="custComment" cols="auto" rows="10"></textarea>
+            </div>
+            <br />
+           
+
+
+            <div class="button">
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Clear Info" />
+
+            </div>
+
+
+
+        </fieldset>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <img src="./Images/oceanside_logo.png" alt="Oceanside Logo">
+        <p>Oceanside Books &#x274F; Buy, Sell, Trade Books &#x274F; New and Used Books</p>
+    </footer>
+
+</body>
+
+</html>

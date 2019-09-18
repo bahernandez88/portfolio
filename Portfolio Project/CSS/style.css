@@ -1,0 +1,423 @@
+@font-face {
+  font-family: 'Kaushan Script';
+  src: url(../Fonts/KaushanScript-Regular.ttf) format("truetype");
+}
+
+html {
+  background-image: url("../Images/pier.png");
+  background-size: 100% 100%;
+  background-image: url("../Images/ocean.png");
+  background-size: cover;
+}
+
+body {
+  margin: 0px 10%;
+  background-image: url("../Images/pier.png");
+  min-height: 1000px;
+}
+
+body header {
+  padding: 1%;
+}
+
+body header h1 {
+  background-color: #051937;
+  border-radius: 50%;
+  width: 50%;
+  font-size: 4em;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 2px 5px 1px white, 1px 1px 25px #00a3c6;
+  text-align: center;
+  padding: 1%;
+  height: 50%;
+  margin: 0px auto;
+  text-shadow: 2px 1px 1px white, 10px 15px 10px #044268;
+  color: #007199;
+  filter: saturate(2);
+  font-family: 'Kaushan Script', cursive;
+}
+
+body article h1 {
+  text-align: center;
+  color: #00a3c6;
+  text-shadow: 1px 1px 1px black;
+}
+
+body article div#specials {
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 2 1 200px;
+  -moz-flex: 2 1 200px;
+  flex: 2 1 200px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
+  -ms-flex-direction: row;
+}
+
+body article div#specials figure {
+  margin: 0px;
+  display: block;
+  margin: 0px auto;
+}
+
+body article div#specials figure img {
+  display: block;
+  margin: 0px auto;
+  border: groove;
+  border-radius: 5%;
+  box-shadow: 5px 5px 10px black;
+}
+
+body article div#specials figure figcaption {
+  display: block;
+  margin: 7px auto;
+  width: 75%;
+  text-align: center;
+  color: #00a3c6;
+  text-shadow: 1px 1px 1px black;
+}
+
+body section {
+  color: #00a3c6;
+  padding: 0px 2%;
+}
+
+body section p {
+  text-align: center;
+}
+
+body article.bookList table {
+  border-collapse: collapse;
+  margin: 0px 5%;
+}
+
+body article.bookList table th {
+  border: solid;
+  border-width: 1px;
+}
+
+body article.bookList table td {
+  border: solid;
+  border-width: 1px;
+}
+
+body article.bookList table::after {
+  display: table;
+  content: "";
+}
+
+body article.bookList thead {
+  color: black;
+}
+
+body article.bookList tfoot {
+  text-align: center;
+  color: black;
+}
+
+body article.bookList caption {
+  caption-side: bottom;
+  font-size: 10pt;
+}
+
+body article.bookList col#covers {
+  background: #007199;
+}
+
+body article.bookList col#descriptions {
+  background: #00a3c6;
+}
+
+body article.bookList col#prices {
+  background: #12d8eb;
+}
+
+body article.bookList thead th {
+  background: #e7bd86;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+body article.bookList tbody {
+  color: black;
+}
+
+body form.form legend {
+  background-color: #00a3c6;
+  color: white;
+  font-weight: bold;
+  padding: 1%;
+}
+
+body form.form fieldset#info {
+  background-color: white;
+  width: 75%;
+  display: block;
+  margin: 0px auto;
+}
+
+body form.form fieldset#info label {
+  vertical-align: top;
+}
+
+body form.form fieldset#info div.button input {
+  display: block;
+  margin: 0px auto;
+  margin-top: 1%;
+  min-width: 100px;
+}
+
+body form.form div.formRow {
+  width: 100%;
+  display: block;
+  margin: 0px auto;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 2 1 200px;
+  -moz-flex: 2 1 200px;
+  flex: 2 1 200px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  text-align: left;
+  padding: 1% 0px;
+}
+
+body form.form div.formRow label {
+  width: 25%;
+  padding: 0px 1%;
+  padding-right: 50px;
+}
+
+body::after {
+  display: table;
+  content: "";
+}
+
+body form.form {
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 2 1 200px;
+  -moz-flex: 2 1 200px;
+  flex: 2 1 200px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: block;
+}
+
+body form.form fieldset#newsletterField {
+  background: white;
+  width: 75%;
+  display: block;
+  margin: 0px auto;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex: 2 1 200px;
+  -moz-flex: 2 1 200px;
+  flex: 2 1 200px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: row wrap;
+  -ms-flex-direction: row wrap;
+}
+
+body form.form fieldset#newsletterField legend {
+  background-color: #00a3c6;
+  color: white;
+  font-weight: bold;
+  padding: 1%;
+}
+
+body form.form fieldset#newsletterField div.button input {
+  display: block;
+  margin: 0px auto;
+  margin-top: 1%;
+  width: 100px;
+}
+
+body form.form fieldset#newsletterField input {
+  display: inline-block;
+  margin: 1px;
+}
+
+nav > ul {
+  text-align: center;
+  padding: 0px;
+}
+
+nav > ul > li {
+  display: inline-block;
+  width: 10em;
+  padding: 1% 0%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav > ul > li a {
+  text-decoration: none;
+  color: #00a3c6;
+  position: absolute;
+  transition: font-size 1s ease-in, color 1s ease-in, text-shadow 1s ease-in, transform 1s ease-in;
+}
+
+nav > ul > li a:hover {
+  font-size: 1.5em;
+  color: #12d8eb;
+  text-shadow: -10px 10px 5px white, 1px 1px 1px black;
+  transform: translateY(-15px);
+}
+
+@keyframes waves {
+  0% {
+    background-position: bottom;
+  }
+  25% {
+    background-position-y: center;
+  }
+  50% {
+    background-position-y: center;
+  }
+  75% {
+    background-position-y: center;
+  }
+  100% {
+    background-position-y: bottom;
+  }
+}
+
+html {
+  animation: waves 10s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+body footer {
+  padding: 5% 0px 0px;
+  text-align: center;
+  color: #00a3c6;
+}
+
+body footer p {
+  text-shadow: 1px 1px 1px black;
+}
+
+body footer img {
+  animation: spin 4s linear infinite;
+}
+
+body footer audio {
+  display: none;
+}
+
+/*Mobile Screens */
+@media only screen and (max-width: 480px) {
+  .labels {
+    width: 100%;
+  }
+  html body {
+    margin: 0px auto;
+    padding: 0px;
+  }
+  html body #horizonNav {
+    display: none;
+  }
+  html body .mobileNav ul {
+    display: none;
+  }
+  html body .mobileNav ul a {
+    position: relative;
+    display: block;
+    margin: 0px auto;
+  }
+  html body #subMenu img {
+    display: block;
+    margin: 0px auto;
+  }
+  html body a#subMenu:hover + ul,
+  html body nav.mobileNav:hover ul#subTitle {
+    display: block;
+    margin: 0px auto;
+  }
+  html body form.form fieldset#info {
+    width: auto;
+  }
+  html body form.form fieldset#info div.formRow label {
+    width: 100%;
+  }
+  html body form.form fieldset#info div.formRow textarea {
+    width: 100%;
+  }
+  html body .table {
+    display: none;
+  }
+  html body table.mobileTable {
+    margin: .25px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  html body table.mobileTable td {
+    width: 100%;
+    text-align: center;
+  }
+  html body form.form fieldset#newsletterField {
+    width: auto;
+  }
+  html body form.form div.formRow {
+    width: 100%;
+  }
+}
+
+/* Tablet Screens */
+@media only screen and (min-width: 481px) {
+  body {
+    margin: 0px;
+  }
+  body .mobileNav {
+    display: none;
+  }
+  body .mobileTable {
+    display: none;
+  }
+  form.form fieldset#info div.formRow textarea {
+    width: 100%;
+  }
+  form.form label {
+    text-align: left;
+  }
+}
+
+/* Desktop screens */
+@media only screen and (min-width: 769px) {
+  body {
+    margin: 0px 10%;
+  }
+  body #navicon {
+    display: none;
+  }
+}
