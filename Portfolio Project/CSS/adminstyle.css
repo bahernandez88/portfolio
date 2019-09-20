@@ -17,6 +17,7 @@ table{
 table th,td{
     border: 1px solid black;
     padding: 0px 5px;
+    background-color:rgba(21,50,67,0.95);
     
 }
 table th{
@@ -24,6 +25,7 @@ table th{
 }
 adminTable{
     color:white;
+    
 }
 
 ul, li{
@@ -32,4 +34,5 @@ ul, li{
     margin: 0px auto;
     
 }
+
 

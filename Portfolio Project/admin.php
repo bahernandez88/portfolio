@@ -24,8 +24,11 @@
 
 try{
     include_once './Model/database.php';
+    $dbClass = new Database();
 //    $db = Database::getDB();
-    $db = Database::getDB();
+    $db = $dbClass->getDB();
+    
+    
 } catch (Exception $ex) {
     //echo 'Connection error: ' . $e->getMessage();
     exit();
@@ -49,7 +52,7 @@ if($action == 'list_visitors'){
 
 $query = 'SELECT * FROM oceanside_contact';
            
-$statement = $db -> prepare($query);
+$statement = $db->prepare($query);
 $statement -> execute();
 $visitors = $statement ->fetchAll();
 $statement ->closeCursor();
@@ -66,6 +69,7 @@ $statement ->closeCursor();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style.css"/>
+        <link rel ="stylesheet" href ="CSS/adminstyle.css "/>
     </head>
     <body>
         <header>

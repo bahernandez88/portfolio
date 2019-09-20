@@ -57,7 +57,10 @@
     </head>
     
     <body>
-        <nav class="mobileNav">
+         <header>
+        <h1>Newsletter</h1>
+    </header>
+    <nav class="mobileNav">
         <a href="#" id="subMenu"><img src="./Images/navicon.png" alt="navIcon"></a>
         <ul id="subTitle">
             <li><a href="index.html">Home</a></li>
@@ -69,7 +72,8 @@
         </ul>
 
     </nav>
-        <nav id="horizonNav">
+
+    <nav id="horizonNav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>

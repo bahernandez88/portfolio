@@ -84,10 +84,21 @@ body article div#specials figure figcaption {
 body section {
   color: #00a3c6;
   padding: 0px 2%;
+  
+  
+}
+section.background{
+    dislay: block;
+    margin: 0px auto;
+    padding: 2%;
+    width:75%;
+    background-color: rgba(21,50,67,0.9);
+    border-radius: 50%;
 }
 
 body section p {
   text-align: center;
+  
 }
 
 body article.bookList table {

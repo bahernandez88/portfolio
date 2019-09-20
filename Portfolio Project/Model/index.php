@@ -20,19 +20,18 @@ $action = filter_input(INPUT_POST, 'action');
 
 if($action == "add_comment"){
     
-    
-    $db=Database::getDB();
-    
+    $dbClass = new Database();
+    $db= $dbClass->getDB();
     //gets values from POST array that were submitted via submit button
     $reason = filter_input(INPUT_POST, 'contactReason');
     $firstName = filter_input(INPUT_POST, 'custFirstName');
     $lastName= filter_input(INPUT_POST, 'custLastName');
     $email = filter_input(INPUT_POST, 'custEmail');
     $phone = filter_input(INPUT_POST, 'custPhone');
-    $comment = filter_input(INPUT_POST, 'custComment');
+    $comment = filter_input(INPUT_POST, 'comment');
     
     //run function from Database class with values received from POST array as arguments
-    $db=Database::addComment($reason, $firstName, $lastName, $email, $phone, $comment);
+    $db=$dbClass ->addComment($reason, $firstName, $lastName, $email, $phone, $comment);
     
     //route to thankyou.php page
     header('Location: ../thankyou.php');
@@ -40,16 +39,30 @@ if($action == "add_comment"){
 }
 
 if($action == "delete_visitor"){
-    $db=Database::getDB();
+    $dbClass = new Database();
+    $db= $dbClass->getDB();
     
     //gets values from POST array that were submitted via delete button
     $visitor_id = filter_input(INPUT_POST, 'visitorID');
     
     //run function from Database class with values received from POST array as arguments
-    $db=Database::deleteComment($visitor_id);
+    $db=$dbClass->deleteComment($visitor_id);
     
     //route to admin.php page
     header('Location: ../admin.php');
+}
+else if($action == "newsletter"){
+    $dbClass = new Database();
+    $db = $dbClass->getDB();
+    
+    $first = filter_input(INPUT_POST, 'newsFirstName');
+    $last = filter_input(INPUT_POST, 'newsLastName');
+    $email = filter_input(INPUT_POST, 'newsEmail');
+    $reason = filter_input(INPUT_POST, 'heardFrom');
+    
+    $db = $dbClass->newsletterSignup($first, $last, $email, $reason);
+    
+    header('Location: ../thankyou.php');
 }
 
 

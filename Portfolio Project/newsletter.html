@@ -38,7 +38,7 @@
             <li><a href="listemployees.php">List Employees</a></li>
         </ul>
     </nav>
-    <form class="form" action="thankyou.php" method="post">
+    <form class="form" action="./Model/index.php" method="post">
         <fieldset id="newsletterField">
 
             <legend>Newsletter Sign Up</legend>
@@ -46,6 +46,7 @@
             <div class="formRow">
                 <label for="signFirst">First Name</label>
                 <input type="text" id="signFirst" name="newsFirstName" required placeholder="First Name">
+                <input type ="hidden" name="action" value ="newsletter"> 
             </div>
 
             <div class="formRow">

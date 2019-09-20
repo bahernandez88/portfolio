@@ -81,8 +81,8 @@ $employees = EmployeeDB::getEmployees();
                     
            
             <section>
-                <a href="newsletter.html">Back to Newsletter Page</a>
-                <a href="index.html">Back to Home</a>
+                <p><a href="newsletter.html">Back to Newsletter Page</a></p>
+                <p><a href="index.html">Back to Home</a></p>
             </section>
         </article>
     </body>

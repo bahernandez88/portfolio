@@ -34,7 +34,9 @@ class Employee{
 
 class EmployeeDB{
     public static function getEmployees(){
-        $db = Database::getDB();
+//        $db = Database::getDB();
+        $dbClass = new Database();
+        $db = $dbClass->getDB();
         $query = 'Select * from employee order by employeeID';
         $statement = $db->prepare($query);
         $statement-> execute();
