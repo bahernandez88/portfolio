@@ -1,48 +1,15 @@
 <?php
 
-//Get data from Newsletter page
-//$firstName = filter_input(INPUT_POST, 'newsFirstName');
-//$lastName = filter_input(INPUT_POST, 'newsLastName');
-//$email= filter_input(INPUT_POST, 'newsEmail');
-//$heard_from = filter_input(INPUT_POST, 'heardFrom');
-
-
-//check user input, give error if it's wrong
-//set up access to database: oceansidedb
-//if ($firstName == null || $lastName == null ||
-//        $email == null) {
-//        $error = "Invalid input data. Check all fields and try again.";
-//        /* include('error.php'); */
-//        echo "Form Data Error: " . $error; 
-//        exit();
-//        } else {
-//            $dsn = 'mysql:host=localhost;dbname=oceansidedb';
-//            $username = 'root';
-//            $password = 'Pa$$w0rd';
+//*****************************************************************************
+//  Date            Name                                Description
+//  ---------------------------------------------------------------------------
+//  9/13/2019   Brian A. Hernandez  thankyou page displays after successful
+//                                  completion of either newsletter or comment
 //
-//            try {
-//                $db = new PDO($dsn, $username, $password);
 //
-//            } catch (PDOException $e) {
-//                $error_message = $e->getMessage();
-//                /* include('database_error.php'); */
-//                echo "DB Error: " . $error_message; 
-//                exit();
-//            }
-//            
-////set up insert statements
-//$query = 'INSERT INTO newsletter'
-//        .   '(firstName, lastName, emailAddress, heardFrom)'
-//        . 'values'
-//        .   '(:firstName, :lastName, :email, :heardFrom)';
-//$statement = $db -> prepare($query);
-//$statement -> bindValue(':firstName', $firstName);
-//$statement -> bindValue(':lastName', $lastName);
-//$statement -> bindValue(':email', $email);
-//$statement -> bindValue(':heardFrom', $heard_from);
-//$statement -> execute();
-//$statement ->closeCursor();
-//        }
+//
+//
+//*****************************************************************************
 ?>
 
 
@@ -53,12 +20,13 @@
         <title>Thank You!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="CSS/style.css"/>
+        <link rel='stylesheet' href ='CSS/style.css'
+        <!--<link rel="stylesheet" href="../CSS/style.css"/>-->
     </head>
     
     <body>
          <header>
-        <h1>Newsletter</h1>
+        <h1>Success!</h1>
     </header>
     <nav class="mobileNav">
         <a href="#" id="subMenu"><img src="./Images/navicon.png" alt="navIcon"></a>

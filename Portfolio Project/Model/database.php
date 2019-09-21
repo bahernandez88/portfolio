@@ -4,6 +4,8 @@
 //  ---------------------------------------------------------------------------
 //  9/13/2019   Brian A. Hernandez      created addComment and deleteVisitor 
 //                                      as functions.
+//  9/20/2019   Brian A. Hernandez      added try/catch blocks for exception
+//                                      handling.
 //
 //
 //
@@ -29,7 +31,7 @@ class Database {
             } catch (PDOException $e) {
               $error_message = $e->getMessage();
               
-              require("./errors/db_error.php");
+              require("../errors/db_error.php");
                 
                 exit();
             }
@@ -58,7 +60,7 @@ class Database {
         $statement->execute();
         $statement->closeCursor();
 
-        //include('../thankyou.php');
+        
     }
     public function deleteComment($id){
         //create db object
@@ -67,11 +69,14 @@ class Database {
         
         
         //query for sql
-        $query = "DELETE FROM oceanside_contact WHERE visitorID = :visitorID";
-        $statement = $db->prepare($query);
-        $statement->bindValue(':visitorID', $id);
-        $statement->execute();
-        $statement->closeCursor();
+            $query = "DELETE FROM oceanside_contact WHERE visitorID = :visitorID";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':visitorID', $id);
+            $statement->execute();
+            $statement->closeCursor();
+       
+        
+        
 
         }
     public function newsletterSignup($first, $last, $email, $reason){

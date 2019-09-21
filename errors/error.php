@@ -1,5 +1,13 @@
 <?php
-
+//*****************************************************************************
+//  Date            Name                                Description
+//  ---------------------------------------------------------------------------
+//  9/13/2019   Brian A. Hernandez  added exception handling page
+//
+//
+//
+//
+//*****************************************************************************
 
 ?>
 
@@ -47,7 +55,7 @@
         
     <main>
         
-    <p>There was an error with the information provided</p>
+    <p><?php echo $error ?></p>
     <p>Please contact the system administrator with the error message below.</p>
     <p>Error message: <?php echo $error_message; ?></p>
 

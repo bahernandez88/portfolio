@@ -13,7 +13,10 @@
 <html>
 <head>
     <title>Database Error</title>
-    <link rel="stylesheet" type="text/css" href="../Portfolio Project/CSS/style.css">
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intitial-scale = 1.0" />
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
 </head>
 <body>
      <header>
@@ -21,7 +24,7 @@
     </header>
     
     <nav class="mobileNav">
-        <a href="#" id="subMenu"><img src="./Images/navicon.png" alt="navIcon"></a>
+        <a href="#" id="subMenu"><img src="../Images/navicon.png" alt="navIcon"></a>
         <ul id="subTitle">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
@@ -39,12 +42,12 @@
 
     <nav id="horizonNav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href = "login.php">Admin Data</a></li>
-            <li><a href="listemployees.php">List Employees</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../products.html">Products</a></li>
+            <li><a href="../newsletter.html">Newsletter</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li><a href="../login.php">Admin Data</a></li>
+            <li><a href="../listemployees.php">List Employees</a></li>
         </ul>
     </nav>
     

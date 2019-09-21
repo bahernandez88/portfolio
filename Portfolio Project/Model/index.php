@@ -10,7 +10,6 @@
 //
 //*****************************************************************************
 
-
 require('database.php');
 
 //get action from post array sent from either submit button on contact.html or
@@ -19,9 +18,10 @@ $action = filter_input(INPUT_POST, 'action');
 
 
 if($action == "add_comment"){
-    
     $dbClass = new Database();
-    $db= $dbClass->getDB();
+    $dbClass->getDB();
+
+    
     //gets values from POST array that were submitted via submit button
     $reason = filter_input(INPUT_POST, 'contactReason');
     $firstName = filter_input(INPUT_POST, 'custFirstName');
@@ -30,15 +30,22 @@ if($action == "add_comment"){
     $phone = filter_input(INPUT_POST, 'custPhone');
     $comment = filter_input(INPUT_POST, 'comment');
     
-    //run function from Database class with values received from POST array as arguments
-    $db=$dbClass ->addComment($reason, $firstName, $lastName, $email, $phone, $comment);
+    try{
+        //run function from Database class with values received from POST array as arguments
+        $db=$dbClass ->addComment($reason, $firstName, $lastName, $email, $phone, $comment);
+    } catch (Exception $ex) {
+        $error = "There was a problem adding your comment, please try again later";
+        $error_message = $e->getMessage();
+        include('../errors/error.php');
+    }
+    
     
     //route to thankyou.php page
     header('Location: ../thankyou.php');
    
 }
 
-if($action == "delete_visitor"){
+else if($action == "delete_visitor"){
     $dbClass = new Database();
     $db= $dbClass->getDB();
     
@@ -46,12 +53,21 @@ if($action == "delete_visitor"){
     $visitor_id = filter_input(INPUT_POST, 'visitorID');
     
     //run function from Database class with values received from POST array as arguments
-    $db=$dbClass->deleteComment($visitor_id);
+    try{
+        $db=$dbClass->deleteComment($visitor_id);
+    } catch (Exception $e) {
+        $error = "There was a problem removing the value";
+        $error_message = $e->getMessage();
+        include('../errors/error.php');
+    }
+    
     
     //route to admin.php page
-    header('Location: ../admin.php');
+    header('Location: ../admin.php');include('../thankyou.php');
 }
 else if($action == "newsletter"){
+//    include_once("database.php");
+    
     $dbClass = new Database();
     $db = $dbClass->getDB();
     
@@ -60,15 +76,23 @@ else if($action == "newsletter"){
     $email = filter_input(INPUT_POST, 'newsEmail');
     $reason = filter_input(INPUT_POST, 'heardFrom');
     
-    $db = $dbClass->newsletterSignup($first, $last, $email, $reason);
+    try{
+        $db = $dbClass->newsletterSignup($first, $last, $email, $reason);
+    } catch (Exception $ex) {
+        $error = "There was a problem adding you to the newsletter, please try again"
+                . "later";
+        $error_message = $e->getMessage();
+        include('../errors/error.php');
+    }
     
+//    include('../thankyou.php');
     header('Location: ../thankyou.php');
+    
 }
 
 
 
 
-
-
-
 ?>
+
+
