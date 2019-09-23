@@ -29,8 +29,9 @@ try{
     $db = $dbClass->getDB();
     
     
-} catch (Exception $ex) {
-    //echo 'Connection error: ' . $e->getMessage();
+} catch (Exception $e) {
+    $error_message = $e->getMessage();
+    include('./errors/error.php');
     exit();
 }
     
